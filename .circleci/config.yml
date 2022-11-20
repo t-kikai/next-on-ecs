@@ -10,7 +10,7 @@ jobs:
       - checkout
       - aws-ecr/build-and-push-image:
           account-url: AWS_ACCOUNT_URL
-          repo: 'zenn-app-frontend'
+          repo: 'next-on-ecs'
           region: AWS_REGION
           tag: '${CIRCLE_SHA1}'
           path: .
