@@ -20,6 +20,11 @@ workflows:
             branches:
               only: main
           aws-access-key-id: AWS_ACCESS_KEY_ID
+          account-url: AWS_ACCOUNT_URL
+          repo: 'next13-on-ecs'
+          region: AWS_REGION
+          tag: '${CIRCLE_SHA1}'
+          path: .
       # - aws-ecs/deploy-service-update:
       #   requires:
       #     - aws-ecr/build-and-push-image # only run this job once aws-ecr/build-and-push-image has completed
