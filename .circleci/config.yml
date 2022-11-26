@@ -21,7 +21,7 @@ workflows:
               only: main
           aws-access-key-id: AWS_ACCESS_KEY_ID
           repo: 'next13-on-ecs'
-          region: AWS_REGION
+          region: '${AWS_REGION}'
           tag: '${CIRCLE_SHA1}'
           path: .
       # - aws-ecs/deploy-service-update:
