@@ -4,13 +4,13 @@ orbs:
   aws-ecr: circleci/aws-ecr@6.12.2
   aws-ecs: circleci/aws-ecs@6.12.2
 
-jobs:
-  build_and_push_image:
-    machine:
-      image: ubuntu-2204:2022.10.2
-    steps:
-      - checkout
-      - aws-ecr/build-and-push-image:
+# jobs:
+#   build_and_push_image:
+#     machine:
+#       image: ubuntu-2204:2022.10.2
+#     steps:
+#       - checkout
+#       - aws-ecr/build-and-push-image:
 
 workflows:
   build_and_push_image:
