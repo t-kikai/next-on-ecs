@@ -20,7 +20,6 @@ workflows:
             branches:
               only: main
           aws-access-key-id: AWS_ACCESS_KEY_ID
-          account-url: AWS_ACCOUNT_URL
           repo: 'next13-on-ecs'
           region: AWS_REGION
           tag: '${CIRCLE_SHA1}'
