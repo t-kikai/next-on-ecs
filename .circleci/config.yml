@@ -11,11 +11,6 @@ jobs:
     steps:
       - checkout
       - aws-ecr/build-and-push-image:
-          account-url: AWS_ACCOUNT_URL
-          repo: 'next13-on-ecs'
-          region: AWS_REGION
-          tag: '${CIRCLE_SHA1}'
-          path: .
 
 workflows:
   build_and_push_image:
