@@ -28,6 +28,5 @@ workflows:
       - aws-ecs/deploy-service-update:
           requires:
             - aws-ecr/build-and-push-image # only run this job once aws-ecr/build-and-push-image has completed
-          family: '${AWS_RESOURCE_NAME_PREFIX}'
-          service-name: '${AWS_RESOURCE_NAME_PREFIX}-service'
+          family: '${AWS_RESOURCE_NAME_PREFIX}-service'
           cluster: '${AWS_RESOURCE_NAME_PREFIX}-cluster'
