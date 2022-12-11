@@ -12,7 +12,7 @@ export default function Home() {
 			</Head>
 
 			<main className={styles.main}>
-				<h1 className={styles.title}>Next on ECS</h1>
+				<h1 className={styles.title}>Next13 on ECS</h1>
 			</main>
 		</div>
 	)
