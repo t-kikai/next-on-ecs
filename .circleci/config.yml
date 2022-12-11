@@ -20,7 +20,6 @@ workflows:
       - aws-ecs/deploy-service-update:
           requires:
             - aws-ecr/build-and-push-image
-          aws-region: AWS_REGION
           family: AWS_RESOURCE_NAME_PREFIX
           cluster-name: AWS_RESOURCE_NAME_PREFIX
           service-name: '${AWS_RESOURCE_NAME_PREFIX}-service'
