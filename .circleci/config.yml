@@ -22,5 +22,5 @@ workflows:
             - aws-ecr/build-and-push-image
           aws-region: AWS_REGION
           family: 'service:${AWS_RESOURCE_NAME_PREFIX}'
-          cluster: '${AWS_RESOURCE_NAME_PREFIX}-cluster'
+          cluster: '${AWS_RESOURCE_NAME_PREFIX}'
           container-image-name-updates: 'container=service:${AWS_RESOURCE_NAME_PREFIX},tag=${CIRCLE_SHA1}'
