@@ -4,14 +4,6 @@ orbs:
   aws-ecr: circleci/aws-ecr@7.3.0
   aws-ecs: circleci/aws-ecs@3.2.0
 
-# jobs:
-#   build_and_push_image:
-#     machine:
-#       image: ubuntu-2204:2022.10.2
-#     steps:
-#       - checkout
-#       - aws-ecr/build-and-push-image:
-
 workflows:
   build_and_push_image:
     jobs:
@@ -27,7 +19,7 @@ workflows:
           path: .
       - aws-ecs/deploy-service-update:
           requires:
-            - aws-ecr/build-and-push-image # only run this job once aws-ecr/build-and-push-image has completed
+            - aws-ecr/build-and-push-image
           family: '${AWS_RESOURCE_NAME_PREFIX}-service'
           cluster: AWS_RESOURCE_NAME_PREFIX
           container-image-name-updates: 'container=${AWS_RESOURCE_NAME_PREFIX}-service,tag=${CIRCLE_SHA1}'
